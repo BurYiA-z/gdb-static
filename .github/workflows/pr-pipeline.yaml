@@ -6,7 +6,7 @@ name: gdb-static-pr-pipeline
 #       - '*'
 on:
   push:
-    tags:
+    branches:
       - '*'
 
 
