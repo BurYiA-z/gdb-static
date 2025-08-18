@@ -1,8 +1,12 @@
 name: gdb-static-pr-pipeline
 
+# on:
+#   pull_request:
+#     branches:
+#       - '*'
 on:
-  pull_request:
-    branches:
+  push:
+    tags:
       - '*'
 
 jobs:
@@ -12,8 +16,8 @@ jobs:
 
     strategy:
       matrix:
-        build_type: ["slim", "full"]
-        architecture: ["x86_64", "arm", "aarch64", "powerpc", "mips", "mipsel"]
+        build_type: ["slim"]
+        architecture: ["mips64"]
 
     runs-on: ubuntu-latest
     steps:

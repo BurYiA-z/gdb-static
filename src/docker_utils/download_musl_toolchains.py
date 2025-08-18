@@ -22,6 +22,7 @@ ARCHS = {
     "powerpc" : "https://github.com/guyush1/musl-cross-make/releases/download/musl-gcc14/powerpc-linux-musl-cross.tgz",
     "mips" : "https://github.com/guyush1/musl-cross-make/releases/download/musl-gcc14/mips-linux-musl-cross.tgz",
     "mipsel" : "https://github.com/guyush1/musl-cross-make/releases/download/musl-gcc14/mipsel-linux-musl-cross.tgz",
+    "mips64" : "https://musl.cc/mips64-linux-musl-cross.tgz",
 }
 CHUNK_SIZE = 65536
 MUSL_TOOLCHAINS_DIR = Path("/musl-toolchains")

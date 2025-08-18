@@ -17,7 +17,7 @@ function set_compilation_variables() {
     # Returns:
     # 0: success
     # 1: failure
-    supported_archs=("arm" "aarch64" "powerpc" "x86_64" "mips" "mipsel")
+    supported_archs=("arm" "aarch64" "powerpc" "x86_64" "mips" "mipsel" "mips64")
 
     local target_arch="$1"
 
@@ -38,6 +38,8 @@ function set_compilation_variables() {
         export HOST=mips-linux-musl
     elif [[ "$target_arch" == "mipsel" ]]; then
         export HOST=mipsel-linux-musl
+    elif [[ "$target_arch" == "mips64" ]]; then
+        export HOST=mips64-linux-musl
     elif [[ "$target_arch" == "x86_64" ]]; then
         export HOST=x86_64-linux-musl
     fi
